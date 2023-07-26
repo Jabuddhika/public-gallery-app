@@ -86,10 +86,12 @@ public class ImageController {
 
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @GetMapping("/delete")
+    @DeleteMapping
     public void deleteImage(@RequestParam(name = "q") String imageUrl){
         imageUrl="images/"+imageUrl;
+        System.out.println(imageUrl);
         String realPath = servletContext.getRealPath(imageUrl);
+        System.out.println(realPath);
         File file = new File(realPath);
         if(!file.exists()) return;
         file.delete();
