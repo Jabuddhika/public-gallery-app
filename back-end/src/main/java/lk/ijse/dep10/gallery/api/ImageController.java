@@ -25,7 +25,7 @@ public class ImageController {
     @Autowired
     private ServletContext servletContext;
     @GetMapping
-    public List<String> getMapping(UriComponentsBuilder uriBuilder){
+    public List<String> getAllImages(UriComponentsBuilder uriBuilder){
         List<String> imageUrlList =new ArrayList<>();
         String imgDirPath = servletContext.getRealPath("/images");
         File ImageDir = new File(imgDirPath);
@@ -86,15 +86,18 @@ public class ImageController {
 
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping
-    public void deleteImage(@RequestParam(name = "q") String imageUrl){
+    @DeleteMapping("/{imageUrl}")
+    public void deleteImage(@PathVariable String imageUrl){
+        System.out.println("entered");
         imageUrl="images/"+imageUrl;
-        System.out.println(imageUrl);
         String realPath = servletContext.getRealPath(imageUrl);
-        System.out.println(realPath);
         File file = new File(realPath);
-        if(!file.exists()) return;
+        if(!file.exists()){
+            System.out.println("file not exists");
+            return;
+        }
         file.delete();
+        System.out.println("file deleted");
     }
 }
 
