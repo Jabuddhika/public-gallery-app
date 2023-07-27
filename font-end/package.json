@@ -9,10 +9,13 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.1",
-    "jquery": "^3.7.0"
+    "jquery": "^3.7.0",
+    "saas": "^1.0.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.9.3",
-    "parcel": "^2.9.3"
+    "buffer": "^6.0.3",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   }
 }

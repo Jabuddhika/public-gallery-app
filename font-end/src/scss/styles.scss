@@ -16,7 +16,7 @@ main div{
   height: 200px;
   width:200px;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 
 }
 
@@ -118,7 +118,7 @@ main .image #icon #download:hover{
 }
 main .image:hover{
   z-index: 1000;
-  transform: scale(1.2);
+  transform: scale(1.1);
   border-radius: 5px;
 }
 
