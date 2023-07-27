@@ -1,0 +1,124 @@
+header{
+  position: sticky;
+  top: 0;
+  color:white;
+  background-color: rgba(128,128,128,0.5);
+  z-index: 999;
+
+}
+h2{
+  font-size: 36px;
+  font-weight: bold;
+  margin: auto;
+}
+
+main div{
+  height: 200px;
+  width:200px;
+  background-position: center;
+  background-size: contain;
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+#overlay{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255,255,255,0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+#drop-area {
+  height: 50%;
+  width: 50%;
+  position: relative;
+  border: 5px dashed white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  span{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+
+  svg {
+    fill:dodgerblue;
+    position: absolute;
+    color: blue;
+    opacity: 0.5;
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+    animation-name: abc;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite;
+
+
+  }
+
+  @keyframes abc {
+    from {
+      top: 50%;
+    }
+    20%{
+      top:51%;
+
+    }
+    40% {
+      top: 52%;
+    }
+    60% {
+      top: 53%;
+    }
+    80% {
+      top: 54%;
+    }
+    to {
+      top: 50%;
+    }
+
+  }
+}
+
+main .image{
+  position: relative;
+}
+main .image #icon{
+  height: max-content;
+  width: max-content;
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  transform: translate(-100%,-100%);
+  background-color: rgba(13,202,240,0.3);
+}
+main .image #icon #delete:hover{
+  fill: red !important;
+}
+main .image #icon #download:hover{
+  fill: forestgreen !important;
+}
+main .image:hover{
+  z-index: 1000;
+  transform: scale(1.2);
+  border-radius: 5px;
+}
+

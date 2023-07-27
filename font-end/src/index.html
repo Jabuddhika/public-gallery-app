@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Public Gallery App</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./scss/styles.scss">
+  <script defer src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script defer type="module" src="./js/main.js"></script>
+
+</head>
+<body>
+<header class="d-flex justify-content-between p-3 border-bottom flex-grow-0">
+  <div class="d-flex flex-row justify-content-between align-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-camera me-1" viewBox="0 0 16 16">
+    <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+    <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+  </svg><h2 class="d-flex align-items-center c">Public Image Gallery</h2></div>
+  <div class="d-flex justify-content-evenly align-items-center"><button type="button" class="btn btn-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+      <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+    </svg><span class="p-2">UPLOAD</span>
+  </button>
+  </div>
+</header>
+<main class="d-flex flex-row gap-2 p-2 flex-wrap justify-content-evenly flex-grow-1">
+
+
+</main>
+<div id="overlay" class="d-none">
+  <div id="drop-area">
+    <span>
+      Drop Your Images Here
+</span>
+    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M251.13-145.869q-91.845 0-157.988-65.774Q27-277.418 27-368.87 27-450.261 77.065-514q50.065-63.74 130.891-76.87 22.261-98.696 98.619-160.761t175.591-62.065q115.095 0 194.421 82.065t83.848 197.761v24q73.696 3.087 123.131 54.528 49.435 51.442 49.435 127.472 0 75.171-54.24 128.586-54.239 53.415-128.891 53.415H526.392q-32.464 0-56.124-23.645-23.659-23.646-23.659-55.573v-231.999l-85.827 86.392-47.522-46.957L480-584.956l167.305 167.305-48.087 46.957-85.827-86.392v231.999h236.681q41.971 0 72.841-30.796 30.869-30.796 30.869-73.117 0-42.739-30.796-73.326-30.796-30.587-73.116-30.587h-68.088v-90.217q0-86.42-58.604-148.601-58.604-62.182-144.914-62.182-87.568 0-146.307 64.283-58.739 64.282-58.739 152.717H249.13q-59.892 0-101.402 41.979-41.51 41.978-41.51 103.826 0 59.847 42.521 102.934 42.522 43.087 102.674 43.087h135.196v79.218H251.13ZM480-440.391Z"/></svg>
+  </div>
+</div>
+
+
+
+</body>
+</html>
