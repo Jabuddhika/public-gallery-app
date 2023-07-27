@@ -88,5 +88,32 @@ function downlaod(name) {
 
     });
 }
+function byteArrayToFile(byteArray, fileName) {
+    // Step 1: Create a Blob from the byteArray
+    const blob = new Blob([byteArray]);
 
+    // Step 2: Generate a temporary object URL
+    const objectURL = URL.createObjectURL(blob);
 
+    // Step 3: Create an anchor element
+    const downloadLink = document.createElement("a");
+    downloadLink.href = objectURL;
+    downloadLink.download = fileName;
+
+    // Step 4: Programmatically click on the anchor to initiate download
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+
+    // Cleanup: Remove the temporary object URL after the download
+    URL.revokeObjectURL(objectURL);
+}
+function deleteFile(name,elm) {
+    const ajax=$.ajax(`${REST_API_URL}/api/v1/images?q=${name}`,'DELETE');
+    ajax.done(()=>{
+        elm.remove();
+    })
+    ajax.fail(()=>{
+        alert("Fail to delete");
+    })
+
+}
